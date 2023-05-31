@@ -19,6 +19,7 @@ def main():
     datalist = []
     driver.get(URL)
     titles = driver.find_elements(By.CSS_SELECTOR, "[data-marker='item']")
+    print(titles)
     for title in titles:
         name = title.find_element(By.CSS_SELECTOR, "[itemprop='name']").text
         description = title.find_element(By.CSS_SELECTOR, "[class*='item-description']").text
